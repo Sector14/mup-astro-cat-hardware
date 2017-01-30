@@ -5,23 +5,27 @@ Raspberry PI 3 which provides additional hardware interfaces to
 communicate and control a Meade Autostar, Moonlite focuser and
 temperature sensors.
 
-![MUP Astro CAT](https://bitbucket.org/BWGaryP/mup-astro-cat/raw/master/docs/mup_astro_cat_on_pi.jpg)
+![MUP Astro CAT](https://bitbucket.org/BWGaryP/mup-astro-cat-hardware/raw/develop/docs/mup_astro_cat_on_pi.jpg)
 
-CAT is either a recursive acronym for "CAT Attached on Top", or stands
-for "Cap Attachd On Top" (caps are not hats!) or more likley it refers
-to the Schmidt-Cassagrain (CAT for short) telescope this board will be
-attached to. Take your pick.
+This repository contains the hardware project files needed to build 
+the MUP Astro CAT. Firmware and the INDI driver is available in a separte
+repo:
 
-The board follows most of the HAT specs but does not meet the size
-requirement or have the back powering protection "ideal" diode.
+  https://bitbucket/org/BWGaryP/mup-astro-cat/
+
+Please refer to the additional documentation in the docs/ directory for
+information on port pinouts for cables and hardware testing notes.
+
+CAT refers to the Schmidt-Cassagrain telescope (CAT for short) this board will
+be attached to. After naming it CAT I considered the recursive "CAP" which
+would stand for "CAP Attached on Pi" since this project doesn't quite meet
+the "Hat" spec, a cap is not a hat! but that means renaming things so CAT it is.
 
 # Directories
 
   * control_cat - Kicad project incl schematic/pcb layout for the MUP Astro Cat. (CERN)
-  * docs        - hardware/software project documentation and 3rd party datasheets
+  * docs        - Documentation and 3rd party datasheets
   * gerber      - Exported gerber files for re-ordering PCBs
-  * software    - libindi drivers (GPL3)
-  * eeprom      - eeprom configuration and overlay source (GPL2)
 
 # Intended Purpose
 
@@ -163,17 +167,14 @@ dual sockets is something I'd prefer to avoid.
 
 ST3232 switch to soic version.
 
+Add pin labels to silkscreen for temp port etc current broken square for
+ground is too hard to see once a pin header is soldered in place.
+
 Add a via behind the regulator to connect ground planes for better
 thermal relief.
 
 HAT specs for back-powering via 5V GPIO header pin requires addition
 of an ideal 'safety' diode see [design guide](https://github.com/raspberrypi/hats/blob/master/designguide.md)
-
-# Additional Documentation
-
-Please refer to the additional documentation in the docs/ directory for
-including information on port pinouts for cables, PI OS configuration notes, 
-testing of the hardware and eeprom programming.
 
 # Reference
 
