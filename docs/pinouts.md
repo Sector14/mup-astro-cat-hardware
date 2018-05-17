@@ -49,7 +49,30 @@ Looking into 6p6c port on Pi Hat, locking tab on bottom, left to right:-
 
 The moonlite focuser uses a DB9 connector with the following pin mapping:-
 
-  [TODO]
+  1. O1 (coil 1+)
+  2. O2 (coil 1-)
+  3. O3 (coil 2+)
+  4. O4 (coil 2-)
+  5. 12v
+  6-9 NC
+
+The cable itself however cannot be a straight out1 -> O1, out2 -> O2 connection
+as the stepping sequence the motor expects uses a different coil connection to the
+out1..4 sequence. The cable needs to be:-
+
+  Board Side -> DB9 Side
+  1. 12v  -> 12v
+  2. Out4 -> O3
+  3. Out3 -> O2
+  4. Out2 -> O4
+  5. Out1 -> O1
+
+           > DB9 Side
+  1. 12v  -> 12v
+  2. Out1 -> O1
+  3. Out2 -> O4
+  4. Out3 -> O2
+  5. Out4 -> O3
 
 # Reference
 

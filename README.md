@@ -1,18 +1,31 @@
-# MUP Astro Hat
+# MUP Astro CAT
 
-The "MUP Astro Hat" is licensed under the CERN Open Hardware License v1.2 
-and based upon the MIT licensed RPi_Hat template by xesscorp. Software
-is licensed under the GPL3. EEPROM firmware is licensed under the GPL2.
+The MUP Astro CAT is an auto GPIO configuring add-on board for the
+Raspberry PI 3 which provides additional hardware interfaces to 
+communicate and control a Meade Autostar, Moonlite focuser and
+temperature sensors.
 
-![MUP Astro Hat](docs/mup-astro-hat-on-pi.jpg)
+![MUP Astro Hat](docs/mup_astro_cat_on_pi.jpg)
+
+This repository contains the hardware project files needed to build 
+the MUP Astro CAT. Firmware and the INDI driver is available in a separte
+repo:
+
+  https://github.com/Sector14/mup-astro-cat
+
+Please refer to the additional documentation in the docs/ directory for
+information on port pinouts for cables and hardware testing notes.
+
+CAT refers to the Schmidt-Cassagrain telescope (CAT for short) this board will
+be attached to. After naming it CAT I considered the recursive "CAP" which
+would stand for "CAP Attached on Pi" since this project doesn't quite meet
+the "Hat" spec, a cap is not a hat! but that means renaming things so CAT it is.
 
 # Directories
 
-  * control_hat - Kicad project incl schematic/pcb layout for the MUP Astro Hat. (CERN)
-  * docs        - hardware/software project documentation and 3rd party datasheets
+  * control_cat - Kicad project incl schematic/pcb layout for the MUP Astro Cat. (CERN)
+  * docs        - Documentation and 3rd party datasheets
   * gerber      - Exported gerber files for re-ordering PCBs
-  * software    - libindi drivers (GPL3)
-  * eeprom      - eeprom configuration and overlay source (GPL2)
 
 # Intended Purpose
 
@@ -54,7 +67,7 @@ opening the schematic then you do not have the MUPS Kicad library available.
 Kicad will use a cached copy of the library so this step is optional, but 
 if you wish to make changes you should clone the repo:
 
-  https://bitbucket.org/BWGaryP/mup-kicad-library
+  https://github.com/Sector14/mup-kicad-library
 
 and add its location "Preferences/Component Libraries" as a user defined 
 search path in the "parts library editor".  Then close and re-open Eeschema
@@ -138,9 +151,9 @@ to stick to the recommended layout and inductors based on the
 TI regulator used. Further experimentation will be done prior to
 revision 2 along with a change to SMD electrolytics and diodes.
 
-A surface mounting socket to mate the hat to the pi would be a better
+A surface mounting socket to mate the CAT to the pi would be a better
 choice as it allows an extended pin leg header to be mounted to the
-pi and then the hat mounted on top. This works out cheaper than the
+pi and then the CAT mounted on top. This works out cheaper than the
 elevated sockets.
 
 Signal lines all need test point locations making available.
@@ -154,17 +167,14 @@ dual sockets is something I'd prefer to avoid.
 
 ST3232 switch to soic version.
 
+Add pin labels to silkscreen for temp port etc current broken square for
+ground is too hard to see once a pin header is soldered in place.
+
 Add a via behind the regulator to connect ground planes for better
 thermal relief.
 
 HAT specs for back-powering via 5V GPIO header pin requires addition
 of an ideal 'safety' diode see [design guide](https://github.com/raspberrypi/hats/blob/master/designguide.md)
-
-# Additional Documentation
-
-Please refer to the additional documentation in the docs/ directory for
-including information on port pinouts for cables, PI OS configuration notes, 
-testing of the hardware and eeprom programming.
 
 # Reference
 

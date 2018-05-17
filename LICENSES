@@ -1,15 +1,13 @@
-# MUP Astro Hat
+# MUP Astro CAT
 
-The "MUP Astro Hat" is licensed under the CERN Open Hardware License v1.2 
-and based upon the MIT licensed RPi_Hat template by xesscorp
+The "MUP Astro CAT" is licensed under the CERN Open Hardware License v1.2 
+and based upon the MIT licensed RPi_Hat template by xesscorp. 
 
-  https://github.com/xesscorp/RPi_Hat_Template
+    https://github.com/xesscorp/RPi_Hat_Template
 
-
-NOTE: Documentation within the docs/datasheets and docs/protocols
-directories are not covered by the following licenses. They remain the property
-of their respective owners and are provided for reference purposes
-only.
+NOTE: Documentation within the docs/datasheets directory is not covered
+by the following licenses. They remain the property of their respective 
+owners and are provided for reference purposes only.
 
 **********************************************************************
 
