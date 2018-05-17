@@ -5,13 +5,13 @@ Raspberry PI 3 which provides additional hardware interfaces to
 communicate and control a Meade Autostar, Moonlite focuser and
 temperature sensors.
 
-![MUP Astro CAT](https://bitbucket.org/BWGaryP/mup-astro-cat-hardware/raw/develop/docs/mup_astro_cat_on_pi.jpg)
+![MUP Astro Hat](docs/mup_astro_cat_on_pi.jpg)
 
 This repository contains the hardware project files needed to build 
 the MUP Astro CAT. Firmware and the INDI driver is available in a separte
 repo:
 
-  https://bitbucket/org/BWGaryP/mup-astro-cat/
+  https://github.com/Sector14/mup-astro-cat
 
 Please refer to the additional documentation in the docs/ directory for
 information on port pinouts for cables and hardware testing notes.
@@ -67,7 +67,7 @@ opening the schematic then you do not have the MUPS Kicad library available.
 Kicad will use a cached copy of the library so this step is optional, but 
 if you wish to make changes you should clone the repo:
 
-  https://bitbucket.org/BWGaryP/mup-kicad-library
+  https://github.com/Sector14/mup-kicad-library
 
 and add its location "Preferences/Component Libraries" as a user defined 
 search path in the "parts library editor".  Then close and re-open Eeschema
