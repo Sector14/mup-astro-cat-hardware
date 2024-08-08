@@ -23,7 +23,7 @@ the "Hat" spec, a cap is not a hat! but that means renaming things so CAT it is.
 
 # Directories
 
-  * control_cat - Kicad project incl schematic/pcb layout for the MUP Astro Cat. (CERN)
+  * control_cat - Kicad 4 project incl schematic/pcb layout for the MUP Astro Cat. (CERN)
   * docs        - Documentation and 3rd party datasheets
   * gerber      - Exported gerber files for re-ordering PCBs
 
